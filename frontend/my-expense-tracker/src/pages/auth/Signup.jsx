@@ -80,21 +80,25 @@ const Signup = () => {
         <form onSubmit={handleSignup}>
           <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-              label="Full Name"
-              placeholder="John Doe"
-              type="text"
-            />
-            <Input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              label="Email Address"
-              placeholder="john@gmail.com"
-            />
-            <div className="col-span-2">
+            <div className="w-full">
+              <Input
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                label="Full Name"
+                placeholder="John Doe"
+                type="text"
+              />
+            </div>
+            <div className="w-full">
+              <Input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                label="Email Address"
+                placeholder="john@gmail.com"
+              />
+            </div>
+            <div className="col-span-1 md:col-span-2">
               <Input
                 type="password"
                 value={password}
